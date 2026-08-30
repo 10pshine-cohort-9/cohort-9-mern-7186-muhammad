@@ -245,3 +245,26 @@ git checkout main && git merge feature/notes-crud
 Use short-lived feature branches per screen/feature (`feature/auth`,
 `feature/dashboard`, `feature/rich-text-editor`, etc.) and merge into
 `main` via pull requests for a clean, reviewable history.
+
+---
+
+## SonarQube Analysis
+
+SonarQube was used to analyze both the backend and frontend of the Notes App for code quality and maintainability.
+
+### Backend Analysis
+
+The backend project was analyzed using SonarQube. The dashboard provides an overview of the detected code-quality metrics and issues.
+
+![Backend SonarQube Dashboard](docs/sonarqube/Backend-Overview-Overall.png)
+
+![Backend SonarQube Issues](docs/sonarqube/Backend-Issues.png)
+
+### Frontend Analysis
+
+The frontend project was also analyzed using SonarQube. The analysis provides code-quality metrics and detected issues for the frontend codebase.
+
+![Frontend SonarQube Dashboard](docs/sonarqube/Frontend-Overview.png)
+
+![Frontend SonarQube Issues](docs/sonarqube/Frontend-Issues.png)
+
