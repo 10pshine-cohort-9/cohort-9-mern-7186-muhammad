@@ -45,6 +45,7 @@ export default function Navbar() {
             type="button"
             className="btn btn-ghost"
             onClick={handleLogout}
+            aria-label="Log out of your account"
             style={{
               background: 'rgba(30, 41, 59, 0.7)',
               borderColor: 'rgba(148, 163, 184, 0.15)',
