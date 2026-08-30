@@ -5,10 +5,10 @@ const logger = require('../config/logger');
 
 const getNotesForUser = async (userId, { search } = {}) => {
   const where = { userId };
-  if (search) {
+  if (search?.trim()) {
     where[Op.or] = [
-      { title: { [Op.like]: `%${search}%` } },
-      { content: { [Op.like]: `%${search}%` } },
+      { title: { [Op.like]: `%${search.trim()}%` } },
+      { content: { [Op.like]: `%${search.trim()}%` } },
     ];
   }
 
