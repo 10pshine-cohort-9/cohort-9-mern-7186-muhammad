@@ -10,11 +10,12 @@ const notFoundHandler = (req, res, next) => {
 };
 
 /**
- * Central exception handler. Every thrown/forwarded error in the
- * app (sync or async, via asyncHandler) ends up here. It:
- *  - Normalizes known/unknown errors into a consistent JSON shape
- *  - Logs full details via Pino (stack traces for unexpected errors)
- *  - Only exposes safe, meaningful messages to the client
+ * Global error handler.
+ *
+ * Responsibilities:
+ * 1. Normalize database and application errors.
+ * 2. Log errors with appropriate severity using Pino.
+ * 3. Return a consistent and safe JSON response to the client.
  */
 // eslint-disable-next-line no-unused-vars
 const errorHandler = (err, req, res, next) => {
