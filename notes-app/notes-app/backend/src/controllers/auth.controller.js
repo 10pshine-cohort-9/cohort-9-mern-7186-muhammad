@@ -7,7 +7,11 @@ const { validateRegisterInput, validateLoginInput } = require('../utils/validato
 const register = asyncHandler(async (req, res) => {
   validateRegisterInput(req.body);
   const { user, token } = await authService.registerUser(req.body);
-  res.status(201).json({ success: true, message: 'Registration successful', data: { user, token } });
+  res.status(201).json({
+  success: true,
+  message: 'Registration successful',
+  data: { user, token },
+});
 });
 
 // @route   POST /api/auth/login
@@ -15,7 +19,11 @@ const register = asyncHandler(async (req, res) => {
 const login = asyncHandler(async (req, res) => {
   validateLoginInput(req.body);
   const { user, token } = await authService.loginUser(req.body);
-  res.status(200).json({ success: true, message: 'Login successful', data: { user, token } });
+  res.status(200).json({
+  success: true,
+  message: 'Login successful',
+  data: { user, token },
+});
 });
 
 // @route   GET /api/auth/me
